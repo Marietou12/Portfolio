@@ -71,10 +71,10 @@ if st.session_state.page == "Présentation projets":
     """)
 
     st.subheader("📌 Projets présentés :")
+    st.markdown("✅ **MatchMyStream** : Un moteur de recommandation de films à base de Machine Learning pour un cinéma en perte de vitesse.")
     st.markdown("✅ **Toys & Models** : Analyse des différents volets (Finance, RH, ventes et logistique) et Dashboard interactif pour une entreprise vendant des modèles réduits et maquettes.")
     st.markdown("✅ **HUG Coffee Shop** : Analyse des ventes et des performances des coffee shops.")
-    st.markdown("✅ **MatchMyStream** : Un moteur de recommandation de films à base de Machine Learning pour un cinéma en perte de vitesse.")
-
+   
     st.subheader("📬 Me Contacter")
     st.write("""
         Si vous souhaitez discuter d'un projet ou collaborer, voici mes coordonnées :

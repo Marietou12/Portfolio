@@ -34,12 +34,13 @@ if "page" not in st.session_state:
 # Création des boutons de navigation
 if st.sidebar.button("🏠 Présentation"):
     st.session_state.page = "Présentation"
+if st.sidebar.button("🎬 MatchMyStream"):
+    st.session_state.page = "MatchMyStream"
 if st.sidebar.button("🧸 Toys & Models"):
     st.session_state.page = "Toys & Models"
 if st.sidebar.button("☕ HUG Coffee Shop"):
     st.session_state.page = "HUG Coffee Shop"
-if st.sidebar.button("🎬 MatchMyStream"):
-    st.session_state.page = "MatchMyStream"
+
 
 # Affichage du contenu en fonction de la page sélectionnée
 if st.session_state.page == "Présentation":
@@ -64,6 +65,47 @@ if st.session_state.page == "Présentation":
         - 💼 **LinkedIn** : [Mariétou NDIAYE](https://www.linkedin.com/in/mariétou-ndiaye-022b98144)
         - 🖥 **GitHub** : [Mariétou12](https://github.com/Marietou12)
     """)
+
+elif st.session_state.page == "MatchMyStream":
+    st.title("🎬 Projet : [MatchMyStream](https://matchmystream-ndarhzydzyy5m93uebox3u.streamlit.app/) - Recommandation de Films")
+    
+    st.markdown("📌 **Merci de suivre [ce lien](https://matchmystream-ndarhzydzyy5m93uebox3u.streamlit.app/) pour voir le rendu de ce projet**")
+
+    st.subheader("**Contexte :**")
+    st.write("""Un cinéma en perte de vitesse dans la région de la Creuse souhaite se moderniser en créant un **moteur de recommandation de films** sur son site web.
+    """)
+
+    st.subheader("📊 Objectifs du Projet")
+    st.markdown("""
+    - **Étude de marché** : Comprendre les habitudes des spectateurs dans la région.
+    - **Analyse des films IMDb** : Identifier les tendances (acteurs, genres, durée, notation).
+    - **Système de recommandation** : Utiliser le machine learning pour suggérer des films pertinents.
+    - **Visualisation et KPIs** : Présenter des statistiques clés sur les films et les préférences du public.
+    """)
+
+    st.subheader("🛠 Méthodologie")
+    st.markdown("""
+    1. **Analyse de la consommation de cinéma dans la région (données CNC, INSEE).**
+    2. **Exploration et nettoyage des datasets IMDb et TMDB.**
+    3. **Visualisation des tendances avec Pandas, Seaborn et Matplotlib.**
+    4. **Implémentation d’un moteur de recommandation (Scikit-Learn).**
+    5. **Affichage des films recommandés avec leurs affiches (API TMDB).**
+    """)
+
+    st.subheader("📄 Ressources et Données")
+    st.markdown("""
+    - **Sources des données** : IMDb, TMDB
+    - **Formats** : TSV (IMDb), JSON (TMDB)
+    - **Taille des datasets** : 7M films, 10M acteurs
+    """)
+
+    st.subheader("🚀 Livrables et Outils")
+    st.markdown("""
+    - Un **dashboard interactif** avec statistiques et recommandations.
+    - Un **système de recommandations basé sur le machine learning**.
+    - Une **interface testable** en ligne pour les spectateurs du cinéma.
+    """)
+
 
 elif st.session_state.page == "Toys & Models":
  
@@ -157,43 +199,3 @@ elif st.session_state.page == "HUG Coffee Shop":
     """)
 
 # Page MatchMyStream (Recommandation de Films)
-elif st.session_state.page == "MatchMyStream":
-    st.title("🎬 Projet : [MatchMyStream](https://matchmystream-ndarhzydzyy5m93uebox3u.streamlit.app/) - Recommandation de Films")
-   
-    st.subheader("**Contexte :**")
-    st.write("""Un cinéma en perte de vitesse dans la région de la Creuse souhaite se moderniser en créant un **moteur de recommandation de films** sur son site web.
-    """)
-
-    st.subheader("📊 Objectifs du Projet")
-    st.markdown("""
-    - **Étude de marché** : Comprendre les habitudes des spectateurs dans la région.
-    - **Analyse des films IMDb** : Identifier les tendances (acteurs, genres, durée, notation).
-    - **Système de recommandation** : Utiliser le machine learning pour suggérer des films pertinents.
-    - **Visualisation et KPIs** : Présenter des statistiques clés sur les films et les préférences du public.
-    """)
-
-    st.subheader("🛠 Méthodologie")
-    st.markdown("""
-    1. **Analyse de la consommation de cinéma dans la région (données CNC, INSEE).**
-    2. **Exploration et nettoyage des datasets IMDb et TMDB.**
-    3. **Visualisation des tendances avec Pandas, Seaborn et Matplotlib.**
-    4. **Implémentation d’un moteur de recommandation (Scikit-Learn).**
-    5. **Affichage des films recommandés avec leurs affiches (API TMDB).**
-    """)
-
-    st.subheader("📄 Ressources et Données")
-    st.markdown("""
-    - **Sources des données** : IMDb, TMDB
-    - **Formats** : TSV (IMDb), JSON (TMDB)
-    - **Taille des datasets** : 7M films, 10M acteurs
-    """)
-
-    st.subheader("🚀 Livrables et Outils")
-    st.markdown("""
-    - Un **dashboard interactif** avec statistiques et recommandations.
-    - Un **système de recommandations basé sur le machine learning**.
-    - Une **interface testable** en ligne pour les spectateurs du cinéma.
-    """)
-
-
-    st.markdown("📌 **Merci de suivre [ce lien](https://matchmystream-ndarhzydzyy5m93uebox3u.streamlit.app/) pour voir le rendu de ce projet**")

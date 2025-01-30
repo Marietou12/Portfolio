@@ -32,8 +32,10 @@ if "page" not in st.session_state:
     st.session_state.page = "Présentation"
 
 # Création des boutons de navigation
-if st.sidebar.button("🏠 Présentation"):
-    st.session_state.page = "Présentation"
+if st.sidebar.button("👤 À propos de moi"):
+    st.session_state.page = "À propos de moi"
+if st.sidebar.button("🏠 Présentation projets"):
+    st.session_state.page = "Présentation projets"
 if st.sidebar.button("🎬 MatchMyStream"):
     st.session_state.page = "MatchMyStream"
 if st.sidebar.button("🧸 Toys & Models"):
@@ -43,7 +45,23 @@ if st.sidebar.button("☕ HUG Coffee Shop"):
 
 
 # Affichage du contenu en fonction de la page sélectionnée
-if st.session_state.page == "Présentation":
+
+if st.session_state.page == "À propos de moi":
+    st.markdown("<h1 style='text-decoration: underline;'>👤 À propos de moi </h1>", unsafe_allow_html=True)
+    st.write("""
+        Bonjour et bienvenue sur mon portfolio ! Je m'appelle Mariétou et je suis actuellement en reconversion professionnelle dans le domaine de la Data. Après avoir obtenu un Master 2 en Économie, j'ai accumulé cinq années d'expérience dans les achats, où j'ai acquis de solides compétences en gestion de données, analyse de performance et optimisation des processus.
+
+Cependant, ma passion pour les chiffres et l'analyse m'a poussé à me tourner vers le domaine de la Data. Pour cela, j'ai suivi une formation Data Analyst de 5 mois certifiée RNCP niveau 6, où j'ai appris à maîtriser les outils et techniques d'analyse de données, ainsi qu'à travailler avec  des outils d'analyse de données tels que Python, SQL,  et les outils de visualisation tels que Power BI et Tableau.
+
+Je mets aujourd'hui ces compétences au service de nouveaux projets en Data, avec l’objectif de contribuer à l'optimisation des décisions stratégiques basées sur l’analyse de données. Mon parcours hybride, alliant une expertise en gestion et une formation technique en Data, me permet de comprendre à la fois les enjeux métier et les solutions techniques pour y répondre.
+
+Je suis à la recherche d'une opportunité dans le domaine de la Data, où je pourrais mettre à profit mes compétences techniques et mon expérience en gestion pour participer activement à la transformation numérique des entreprises.
+
+N'hésitez pas à explorer ce site pour découvrir davantage mes réalisations en Data.
+    """)
+
+
+if st.session_state.page == "Présentation projets":
    
     st.markdown("<h1 style='text-decoration: underline;'>👋 Bienvenue sur mon Portfolio de Data Analyst</h1>", unsafe_allow_html=True)
     st.write("""

@@ -93,7 +93,7 @@ elif st.session_state.page == "MatchMyStream":
     st.write("""Un cinéma en perte de vitesse dans la région de la Creuse souhaite se moderniser en créant un **moteur de recommandation de films** sur son site web.
     """)
 
-    st.subheader("📊 Objectifs du Projet")
+    st.subheader("📊 Objectifs du Projet :")
     st.markdown("""
     - **Étude de marché** : Comprendre les habitudes des spectateurs dans la région.
     - **Analyse des films IMDb** : Identifier les tendances (acteurs, genres, durée, notation).
@@ -110,7 +110,7 @@ elif st.session_state.page == "MatchMyStream":
     5. **Affichage des films recommandés avec leurs affiches (API TMDB).**
     """)
 
-    st.subheader("📄 Ressources et Données")
+    st.subheader("📄 Ressources et Données :")
     st.markdown("""
     - **Sources des données** : IMDb, TMDB
     - **Formats** : TSV (IMDb), JSON (TMDB)
@@ -136,7 +136,7 @@ Dans le cadre de ce projet, notre équipe avait pour mission de concevoir un das
 Pour ma part, j'étais spécifiquement en charge de l'analyse financière.
     """)
 
-    st.subheader("📊 Objectifs du tableau de bord")
+    st.subheader("📊 Objectifs du tableau de bord :")
     st.markdown("""
     - **Ventes** : Chiffre d'affaires, évolution mensuelle, panier moyen.
     - **Finances** : Meilleurs clients, chiffre d'affaire, taux de paiement, paiement moyen.
@@ -165,7 +165,7 @@ elif st.session_state.page == "HUG Coffee Shop":
         Mon objectif était d’identifier les produits les plus populaires, les tendances de consommation et les périodes de forte affluence.
     """)
 
-    st.subheader("📊 Objectifs de l’analyse")
+    st.subheader("📊 Objectifs de l’analyse :")
     st.markdown("""
     - Analyser les ventes par période (heure, jour, mois).
     - Identifier les produits les plus populaires.
@@ -209,7 +209,7 @@ elif st.session_state.page == "HUG Coffee Shop":
                 file_name="compte_rendu_final.pdf",
                 mime="application/pdf"
             )
-    st.subheader("📄 Outils utilisés")
+    st.subheader("📄 Outils utilisés :")
     st.markdown("""
     - *Python*
     - *Power BI*

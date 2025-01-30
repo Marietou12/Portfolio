@@ -87,7 +87,7 @@ if st.session_state.page == "Présentation projets":
 elif st.session_state.page == "MatchMyStream":
     st.title("🎬 Projet : [MatchMyStream](https://matchmystream-ndarhzydzyy5m93uebox3u.streamlit.app/) - Recommandation de Films")
     
-    st.markdown("📌 **Merci de suivre [ce lien](https://matchmystream-ndarhzydzyy5m93uebox3u.streamlit.app/) pour voir le rendu de ce projet**")
+    st.markdown("📌 **Merci de suivre [ce lien](https://matchmystream-ndarhzydzyy5m93uebox3u.streamlit.app/) pour voir le rendu de ce projet !**")
 
     st.subheader("**Contexte :**")
     st.write("""Un cinéma en perte de vitesse dans la région de la Creuse souhaite se moderniser en créant un **moteur de recommandation de films** sur son site web.

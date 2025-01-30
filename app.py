@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="Portfolio Data Analyst", page_icon="📊", layout="wide")
 
 # Appliquer du CSS pour uniformiser la taille des boutons
-st.sidebar.image("photo.jpg", use_column_width=True)
+
 st.sidebar.markdown("""
     <style>
     .sidebar-button {

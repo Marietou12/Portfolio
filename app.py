@@ -133,7 +133,7 @@ elif st.session_state.page == "HUG Coffee Shop":
             )
     with col2:
         st.markdown("##### 📘 Analyse Statistique")
-        with open("analyse_PYTHON.pdf", "rb") as file_stat:
+        with open("Analyse_PYTHON.pdf", "rb") as file_stat:
             st.download_button(
                 label="📥 Télécharger l'Analyse Statistique",
                 data=file_stat,
@@ -142,7 +142,7 @@ elif st.session_state.page == "HUG Coffee Shop":
             )
     with col3:
         st.markdown("##### 📙 Compte Rendu Final")
-        with open("Rapport _global_d'analyse.pdf", "rb") as file_report:
+        with open("Rapport_global_d'analyse.pdf", "rb") as file_report:
             st.download_button(
                 label="📥 Télécharger le Compte Rendu Final",
                 data=file_report,

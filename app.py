@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # Configuration de la page
 st.set_page_config(page_title="Portfolio Data Analyst", page_icon="📊", layout="wide")
@@ -29,7 +30,7 @@ st.sidebar.title("📁 Menu")
 
 # Initialisation de l'état si non défini
 if "page" not in st.session_state:
-    st.session_state.page = "À propos de moi"
+    st.session_state.page = "Présentation"
 
 # Création des boutons de navigation
 if st.sidebar.button("👤 À propos de moi"):
@@ -42,6 +43,8 @@ if st.sidebar.button("🧸 Toys & Models"):
     st.session_state.page = "Toys & Models"
 if st.sidebar.button("☕ HUG Coffee Shop"):
     st.session_state.page = "HUG Coffee Shop"
+if st.sidebar.button("🍷 Domaine des Croix"):
+    st.session_state.page = "Domaine des Croix"
 
 
 # Affichage du contenu en fonction de la page sélectionnée
@@ -49,16 +52,16 @@ if st.sidebar.button("☕ HUG Coffee Shop"):
 if st.session_state.page == "À propos de moi":
     st.markdown("<h1 style='text-decoration: underline;'>👤 À propos de moi </h1>", unsafe_allow_html=True)
     st.write("""
-        Bonjour et bienvenue sur mon portfolio ! Je m'appelle Mariétou et je suis actuellement en reconversion professionnelle dans le domaine de la Data. Après avoir obtenu un Master 2 en Économie, j'ai accumulé cinq années d'expérience dans les achats, où j'ai acquis de solides compétences en gestion de données, analyse de performance et optimisation des processus.
+    Bonjour et bienvenue sur mon portfolio ! Je m'appelle Mariétou et je suis passionnée par l'analyse de données.
 
-Cependant, ma passion pour les chiffres et l'analyse m'a poussé à me tourner vers le domaine de la Data. Pour cela, j'ai suivi une formation Data Analyst de 5 mois certifiée RNCP niveau 6, où j'ai appris à maîtriser les outils et techniques d'analyse de données, ainsi qu'à travailler avec  des outils d'analyse de données tels que Python, SQL,  et les outils de visualisation tels que Power BI et Tableau.
+    Je me consacre aujourd'hui à transformer les données en leviers de décision stratégique.  
+    Formée aux outils et techniques de Data Analysis, je maîtrise notamment **Python**, **SQL**, **Power BI** et **Tableau**, que j'utilise pour explorer, analyser et visualiser les données de manière claire et pertinente.
 
-Je mets aujourd'hui ces compétences au service de nouveaux projets en Data, avec l’objectif de contribuer à l'optimisation des décisions stratégiques basées sur l’analyse de données. Mon parcours hybride, alliant une expertise en gestion et une formation technique en Data, me permet de comprendre à la fois les enjeux métier et les solutions techniques pour y répondre.
+    **Mon objectif** : mener des projets Data qui permettent de mieux comprendre les phénomènes, d'identifier des tendances et de résoudre des problématiques concrètes grâce à l’analyse de données.
 
-Je suis à la recherche d'une opportunité dans le domaine de la Data, où je pourrais mettre à profit mes compétences techniques et mon expérience en gestion pour participer activement à la transformation numérique des entreprises.
-
-N'hésitez pas à explorer ce site pour découvrir davantage mes réalisations en Data.
+    N'hésitez pas à explorer ce site pour découvrir davantage mes réalisations en Data.
     """)
+
 
 
 if st.session_state.page == "Présentation projets":
@@ -71,10 +74,11 @@ if st.session_state.page == "Présentation projets":
     """)
 
     st.subheader("📌 Projets présentés :")
-    st.markdown("✅ **MatchMyStream** : Un moteur de recommandation de films à base de Machine Learning pour un cinéma en perte de vitesse.")
     st.markdown("✅ **Toys & Models** : Analyse des différents volets (Finance, RH, ventes et logistique) et Dashboard interactif pour une entreprise vendant des modèles réduits et maquettes.")
     st.markdown("✅ **HUG Coffee Shop** : Analyse des ventes et des performances des coffee shops.")
-   
+    st.markdown("✅ **MatchMyStream** : Un moteur de recommandation de films à base de Machine Learning pour un cinéma en perte de vitesse.")
+    st.markdown("✅ **Domaine des Croix** : Étude de marché stratégique pour un domaine viticole bourguignon souhaitant exporter aux États-Unis.") 
+
     st.subheader("📬 Me Contacter")
     st.write("""
         Si vous souhaitez discuter d'un projet ou collaborer, voici mes coordonnées :
@@ -84,16 +88,16 @@ if st.session_state.page == "Présentation projets":
         - 🖥 **GitHub** : [Mariétou12](https://github.com/Marietou12)
     """)
 
+
 elif st.session_state.page == "MatchMyStream":
     st.title("🎬 Projet : [MatchMyStream](https://matchmystream-ndarhzydzyy5m93uebox3u.streamlit.app/) - Recommandation de Films")
-    
-    st.markdown("📌 **Merci de suivre [ce lien](https://matchmystream-ndarhzydzyy5m93uebox3u.streamlit.app/) pour voir le rendu de ce projet !**")
+    st.markdown("📌 **Merci de suivre [ce lien](https://matchmystream-ndarhzydzyy5m93uebox3u.streamlit.app/) pour voir le rendu de ce projet.**")
 
     st.subheader("**Contexte :**")
     st.write("""Un cinéma en perte de vitesse dans la région de la Creuse souhaite se moderniser en créant un **moteur de recommandation de films** sur son site web.
     """)
 
-    st.subheader("📊 Objectifs du Projet :")
+    st.subheader("📊 Objectifs du Projet")
     st.markdown("""
     - **Étude de marché** : Comprendre les habitudes des spectateurs dans la région.
     - **Analyse des films IMDb** : Identifier les tendances (acteurs, genres, durée, notation).
@@ -110,7 +114,7 @@ elif st.session_state.page == "MatchMyStream":
     5. **Affichage des films recommandés avec leurs affiches (API TMDB).**
     """)
 
-    st.subheader("📄 Ressources et Données :")
+    st.subheader("📄 Ressources et Données")
     st.markdown("""
     - **Sources des données** : IMDb, TMDB
     - **Formats** : TSV (IMDb), JSON (TMDB)
@@ -125,6 +129,7 @@ elif st.session_state.page == "MatchMyStream":
     """)
 
 
+  
 elif st.session_state.page == "Toys & Models":
  
     st.markdown("<h1 style='text-decoration: underline;'>🧸 Projet : Toys & Models</h1>", unsafe_allow_html=True)
@@ -136,7 +141,7 @@ Dans le cadre de ce projet, notre équipe avait pour mission de concevoir un das
 Pour ma part, j'étais spécifiquement en charge de l'analyse financière.
     """)
 
-    st.subheader("📊 Objectifs du tableau de bord :")
+    st.subheader("📊 Objectifs du tableau de bord")
     st.markdown("""
     - **Ventes** : Chiffre d'affaires, évolution mensuelle, panier moyen.
     - **Finances** : Meilleurs clients, chiffre d'affaire, taux de paiement, paiement moyen.
@@ -165,7 +170,7 @@ elif st.session_state.page == "HUG Coffee Shop":
         Mon objectif était d’identifier les produits les plus populaires, les tendances de consommation et les périodes de forte affluence.
     """)
 
-    st.subheader("📊 Objectifs de l’analyse :")
+    st.subheader("📊 Objectifs de l’analyse")
     st.markdown("""
     - Analyser les ventes par période (heure, jour, mois).
     - Identifier les produits les plus populaires.
@@ -193,7 +198,7 @@ elif st.session_state.page == "HUG Coffee Shop":
             )
     with col2:
         st.markdown("##### 📘 Analyse Statistique")
-        with open("Analyse_PYTHON.pdf", "rb") as file_stat:
+        with open("analyse_PYTHON.pdf", "rb") as file_stat:
             st.download_button(
                 label="📥 Télécharger l'Analyse Statistique",
                 data=file_stat,
@@ -209,11 +214,55 @@ elif st.session_state.page == "HUG Coffee Shop":
                 file_name="compte_rendu_final.pdf",
                 mime="application/pdf"
             )
-    st.subheader("📄 Outils utilisés :")
+    st.subheader("📄 Outils utilisés")
     st.markdown("""
     - *Python*
     - *Power BI*
     
     """)
 
-# Page MatchMyStream (Recommandation de Films)
+
+elif st.session_state.page == "Domaine des Croix":
+    st.title("🍷 Projet : Domaine des Croix – Étude de Marché")
+    st.markdown("📌 **Projet de positionnement stratégique sur le marché américain des vins pour le Domaine des Croix.**")
+
+    st.subheader("**Contexte :**")
+    st.write("""
+    Le Domaine des Croix, producteur de vin en Bourgogne, souhaite exporter aux États-Unis. 
+    L'objectif est de déterminer un prix de vente compétitif en s'appuyant sur l'analyse de 130 000 références de vins présents sur le marché américain.
+    """)
+
+    st.subheader("📊 Objectifs du Projet")
+    st.markdown("""
+    - Analyser le marché américain du vin (répartition, prix, notes, cépages).
+    - Comparer le vin du client aux produits similaires (Pinot Noir, Bourgogne, même millésime).
+    - Évaluer un prix optimal selon la stratégie : entrée, médiane, ou haut de gamme.
+    - Créer un tableau de bord interactif (Power BI / Streamlit) pour visualiser les insights.
+    """)
+
+    st.subheader("🛠 Méthodologie")
+    st.markdown("""
+    1. **Nettoyage des données** : suppression des valeurs manquantes, harmonisation des cépages et régions.
+    2. **Exploration statistique** : distribution des prix, corrélation notes/prix, répartition géographique.
+    3. **Analyse comparative** : focus sur les Pinot Noir de Bourgogne (millésime 2016).
+    4. **Calculs statistiques** : médiane, percentiles, scoring de similarité avec description.
+    """)
+
+    st.subheader("📄 Ressources et Données")
+    st.markdown("""
+    - **Dataset principal** : 130 000 vins vendus sur le marché américain.
+    - **Dataset client** : 1 vin du Domaine des Croix.
+    - **Colonnes clés** : prix, notes (points), pays, région, cépage, description.
+    """)
+
+    st.subheader("🚀 Livrables et Outils")
+    st.markdown("""
+    - **Recommandation de prix personnalisée** (par percentile).
+    - **Analyse textuelle** de la description via TF-IDF et similarité cosine.
+    - **Visualisations interactives** (Plotly, Power BI, Streamlit).
+    - **Dashboard final **
+    """)
+
+    st.subheader("🎥 Démonstration du Dashboard")
+    st.video("https://www.youtube.com/watch?v=0K2SXe49HFQ")
+    st.markdown("🔗 [Voir la vidéo complète](https://www.youtube.com/watch?v=0K2SXe49HFQ)")

@@ -30,7 +30,7 @@ st.sidebar.title("📁 Menu")
 
 # Initialisation de l'état si non défini
 if "page" not in st.session_state:
-    st.session_state.page = "Présentation"
+    st.session_state.page ="À propos de moi"
 
 # Création des boutons de navigation
 if st.sidebar.button("👤 À propos de moi"):
